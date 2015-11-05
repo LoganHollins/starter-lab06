@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this liscence header, choose Liscense Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor
+-->
+<!--
+    TODO define vocabulary identifiation data
+    PUBLIC ID : -//vendor//vocabulary//EN
+    SYSTEM ID : htpp://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follow: -->
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
