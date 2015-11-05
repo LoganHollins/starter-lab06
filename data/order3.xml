@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!DOCTYPE order SYSTEM 'bonanza.dtd'>
+<order type="takeout">
+ <customer>Logan</customer>
+ <burger>
+     <patty type="turkey" />
+     <cheeses bottom="brie" />
+     <topping type="raw" />
+     <topping type="fkchili" />
+     <topping type="salsa" />
+     <sauce type="fksalsa" />
+     <sauce type="mustard" />
+ </burger>
+</order>
