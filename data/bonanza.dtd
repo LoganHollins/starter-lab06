@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Order placement data for Barker Bob's Burger Bigger, Better Burger Bonanza
+-->
+<!-- TODO define your own vocabulary/syntax. Example follows: -->
+<!ELEMENT order (customer, delivery?, burgers+, special?)>
+
+<!-- A customer is idetified somply by their name -->
+<!ELEMENT customer (#PCDATA)>
+
+<!-- An order can be for eat-in, takeout, or delivery ... customer-specified-->
+<!ATTLIST order
+    type    (eatin|takeout|delivery) #REQUIRED
+>
+
+<!-- An order to be delivered will need delivery instructions -->
+<!ELEMENT delivery (#PCDATA)>
+
+<!-- Let's provide for any special instructions -->
+<!ELEMENT special (#PCDATA)>
+
+<!-- The burgers will be specified individually
+    Burger customization...
+    - 1 of 5 patty types
+    - up to two cheeses
+    - any number of toppings
+    - any number of sauces
+    - special instructions
+    - an option name, should the customer wish to propose this as a menu item
+-->
+<!ELEMENT burger (patty, cheeses, toppings, sauces, instructions, name?)>
+
+<!ELEMENT patty (#PCDATA)>
+<!ATTLIST patty
+    type (beef|pork|turkey|bison|vege) "beef"
+>
+
+<!ELEMENT cheeses EMPTY>
+<!ATTLIST cheeses
+    top (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
+    bottom (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
+>
+
+<!ELEMENT topping (#PCDATA)>
+<!ATTLIST topping
+    type (lettuce|tomato|raw|dill|roasted|shrooms|salsa|bacon|chilies|fkchili|avocado|egg|porkbelly) #REQUIRED
+>
+
+<!ELEMENT sauce EMPTY>
+<!ATTLIST sauce
+    type (ketchup|mustard|mayo|fksauce) #REQUIRED
+>
+
+
+<!ELEMENT instructions (#PCDATA)>
+
+<!ELEMENT name (#PCDATA)>
